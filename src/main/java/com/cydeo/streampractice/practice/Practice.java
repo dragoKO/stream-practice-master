@@ -115,6 +115,17 @@ public class Practice {
                 .filter(department -> department.getDepartmentName().equals("IT"))
                 .map(department -> department.getLocation().getCountry().getRegion())
                 .findFirst().get();
+        /*
+    public static Region getRegionOfITDepartment() throws Exception {
+        return getAllDepartments().stream()
+                .filter(department -> department.getDepartmentName().equals("IT"))
+                .map(department -> department.getLocation()
+                        .getCountry()
+                        .getRegion())
+                .findAny()
+                .orElseThrow();
+    }
+         */
     }
 
     // Display all the departments where the region of department is 'Europe'
