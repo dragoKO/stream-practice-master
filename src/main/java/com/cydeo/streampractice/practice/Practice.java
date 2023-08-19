@@ -115,8 +115,15 @@ public class Practice {
                 .filter(department -> department.getDepartmentName().equals("IT"))
                 .map(department -> department.getLocation().getCountry().getRegion())
                 .findFirst().get();
+
         /*
-    public static Region getRegionOfITDepartment() throws Exception {
+        return getAllDepartments().stream()
+                .filter(department -> department.getDepartmentName().equals("IT"))
+                .map(department -> department.getLocation().getCountry().getRegion())
+                .findFirst().orElseThrow(() -> new Exception("Department not found"));
+        */
+
+        /*
         return getAllDepartments().stream()
                 .filter(department -> department.getDepartmentName().equals("IT"))
                 .map(department -> department.getLocation()
@@ -124,7 +131,6 @@ public class Practice {
                         .getRegion())
                 .findAny()
                 .orElseThrow();
-    }
          */
     }
 
